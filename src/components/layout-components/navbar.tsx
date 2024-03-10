@@ -4,6 +4,7 @@ import { siteConfig } from "@/utils/site-config";
 import { Link } from "react-router-dom";
 import { Box, ShoppingCart, SidebarOpen } from "lucide-react";
 import { ModeToggle } from "../mode-toggle";
+import Sidebar from "./sidebar";
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
@@ -37,18 +38,18 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </Link>
         <ModeToggle />
       </div>
-      <div className=" ml-auto  pr-4  gap-x-5 flex lg:hidden">
-        <Button variant={"outline"} size={"icon"} className="w-10 h-10">
-          <SidebarOpen className="w-5 h-5" />
-        </Button>
+      <div className=" ml-auto  pr-4  gap-x-4 flex lg:hidden">
+        <Sidebar />
         <Link to={"/auth/login"}>
-          <Button variant={"primaryGradient"}>Login</Button>
+          <Button size={"sm"} variant={"primaryGradient"}>
+            Login
+          </Button>
         </Link>
         <Link to={"/cart"}>
           <Button
             variant={"outline"}
             size={"icon"}
-            className=" w-10 h-10 mx-2 border-x-primary  border-t-blue-400 border-b-blue-300 ring-1"
+            className=" mx-2 border-x-primary  border-t-blue-400 border-b-blue-300 ring-1"
           >
             <ShoppingCart className=" w-5 h-5   " />
           </Button>

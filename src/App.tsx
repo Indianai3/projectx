@@ -1,11 +1,9 @@
-import { Link, Route, Routes } from "react-router-dom";
-import MainLayout from "./layouts/MainLayout";
-import AuthOnlyLayout from "./layouts/AuthOnlyLayout";
-import { Button } from "./components/ui/button";
-import { Loader } from "lucide-react";
-import PageNotFound from "./pages/PageNotFound";
 import LadingPage from "@/pages/LadingPage";
 import SignIn from "@/pages/auth/SignIn";
+import { Route, Routes } from "react-router-dom";
+import AuthOnlyLayout from "./layouts/AuthOnlyLayout";
+import MainLayout from "./layouts/MainLayout";
+import PageNotFound from "./pages/PageNotFound";
 
 const App = () => {
   return (

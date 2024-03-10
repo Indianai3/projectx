@@ -1,5 +1,5 @@
-import { FC } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { FC } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -7,11 +7,9 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
-  FormMessage,
+  FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { SparklesIcon, WandSparklesIcon } from "lucide-react";
@@ -52,7 +50,7 @@ const AiPrompt: FC<AiPromptProps> = ({}) => {
               </FormItem>
             )}
           />
-          <div className=" flex  justify-between mx-5">
+          <div className=" flex  justify-between md:mx-5 flex-col-reverse md:flex-row gap-8 ">
             <Button
               variant={"outline"}
               size={"lg"}
