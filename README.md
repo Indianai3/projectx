@@ -1,1 +1,1 @@
-# projectx
+# React + TypeScript + Vite
