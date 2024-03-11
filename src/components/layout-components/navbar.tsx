@@ -1,22 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/utils/site-config";
-import { Box, ShoppingCart } from "lucide-react";
+import { ShoppingCart } from "lucide-react";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 import { ModeToggle } from "../mode-toggle";
+import Logo from "./logo";
 import Sidebar from "./sidebar";
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
   return (
-    <div className="flex justify-center items-center h-16 px-1  md:px-3  py-1 shadow-md shadow-secondary w-full ">
-      <div className="">
-        <Link to={"/"}>
-          <Button variant={"navbar"} className=" text-xl font-semibold">
-            <Box className=" w-6 h-6 mr-3 " /> {siteConfig.name}
-          </Button>
-        </Link>
-      </div>
+    <div className="flex justify-center items-center h-16   py-1 shadow-md shadow-secondary w-full bggrad ">
+      <Logo />
       <div className=" ml-auto  pr-4  gap-x-5 hidden lg:flex">
         <Link to={"/#contact-us"}>
           <Button variant={"ghost"}> Contact Us </Button>

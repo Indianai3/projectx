@@ -54,17 +54,17 @@
     @apply border-border;
   }
   body {
-    @apply bg-gradient-to-tl from-background via-background/90 to-background/95  text-foreground;
+    @apply bg-gradient-to-tl from-background via-secondary/80 to-background/95  text-foreground;
+  }
+
+  .bggrad {
+    @apply bg-gradient-to-tl from-background via-secondary/80 to-background/95;
   }
 }
 
-bg-grad {
-  @apply bg-gradient-to-tl from-background via-background/90 to-background/95;
-}
 html,
 body,
 :root {
-  height: 100%;
   font-family: "Inter Variable", sans-serif;
 }
 
