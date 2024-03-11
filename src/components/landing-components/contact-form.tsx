@@ -49,11 +49,11 @@ const ContactForm: FC<ContactFormProps> = ({}) => {
   }
 
   return (
-    <Card className="md:max-w-[80%] w-full  mx-auto   ring-1 flex justify-center items-center  gap-y-6 rounded-lg px-5 ">
+    <Card className="md:max-w-[80%] w-full  mx-auto  md:p-5 p-2   ring-1 flex justify-center items-center  gap-y-6 rounded-lg px-5 ">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="space-y-8   bg-background  rounded-md   w-full text-card-foreground"
+          className="space-y-8    rounded-md   w-full text-card-foreground"
         >
           <FormField
             control={form.control}

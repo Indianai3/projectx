@@ -26,9 +26,9 @@ const ContactUs: FC<ContactUsProps> = ({ label }) => {
   return (
     <Drawer>
       <DrawerTrigger>{label} </DrawerTrigger>
-      <DrawerContent className="">
+      <DrawerContent className="bggrad">
         <DrawerHeader>
-          <Card className=" border-none shadow-none w-full h-full flex lg:flex-row flex-col  justify-between items-center m-0 p-0 ">
+          <Card className="  border-none shadow-none w-full h-full flex lg:flex-row flex-col bg-inherit  justify-between items-center m-0 p-0 ">
             <CardHeader className="w-1/2">
               <div className=" w-2/3 hidden lg:block">
                 <CardTitle className=" text-4xl font-semibold">
