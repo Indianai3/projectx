@@ -8,6 +8,7 @@ import { navLink } from "@/utils/nav-link";
 import { SidebarOpen } from "lucide-react";
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import ContactUs from "../landing-components/contact-us";
 
 interface SidebarProps {}
 
@@ -24,13 +25,22 @@ const Sidebar: FC<SidebarProps> = ({}) => {
         >
           <SheetHeader className="mt-5">
             <div className="w-full flex flex-col justify-center items-center gap-y-6 md:gap-y-8  ">
-              {navLink.map((item) => (
-                <Link to={item.link} key={item.label} className="w-full">
-                  <div className="min-w-full p-3 m-1  md:p-4  rounded-md text-lg font-medium bg-muted/30 text-muted-foreground  flex justify-center items-center  min-h-12">
-                    {item.label}
+              {navLink.map((item) =>
+                item.link === "/#contact-us" ? (
+                  <div
+                    key={item.label}
+                    className="min-w-full p-3 m-1  md:p-4  rounded-md text-lg font-medium bg-muted/30 text-muted-foreground  flex justify-center items-center  min-h-12"
+                  >
+                    <ContactUs label={item.label} />
                   </div>
-                </Link>
-              ))}
+                ) : (
+                  <Link to={item.link} key={item.label} className="w-full">
+                    <div className="min-w-full p-3 m-1  md:p-4  rounded-md text-lg font-medium bg-muted/30 text-muted-foreground  flex justify-center items-center  min-h-12">
+                      {item.label}
+                    </div>
+                  </Link>
+                )
+              )}
             </div>
           </SheetHeader>
         </SheetContent>

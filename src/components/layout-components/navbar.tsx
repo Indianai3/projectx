@@ -1,7 +1,9 @@
 import { Button } from "@/components/ui/button";
+import { navLink } from "@/utils/nav-link";
 import { ShoppingCart } from "lucide-react";
 import { FC } from "react";
 import { Link } from "react-router-dom";
+import ContactUs from "../landing-components/contact-us";
 import { ModeToggle } from "../mode-toggle";
 import Logo from "./logo";
 import Sidebar from "./sidebar";
@@ -12,12 +14,16 @@ const Navbar: FC<NavbarProps> = ({}) => {
     <div className="flex justify-center items-center h-16   py-1 shadow-md shadow-secondary w-full bggrad ">
       <Logo />
       <div className=" ml-auto  pr-4  gap-x-5 hidden lg:flex">
-        <Link to={"/#contact-us"}>
-          <Button variant={"ghost"}> Contact Us </Button>
-        </Link>
-        <Link to={"/faq"}>
-          <Button variant={"ghost"}> FAQ</Button>
-        </Link>
+        {navLink.map((item) =>
+          item.link === "/#contact-us" ? (
+            <ContactUs label={item.label} key={item.label} />
+          ) : (
+            <Link to={item.link} key={item.label}>
+              <Button variant="ghost">{item.label}</Button>
+            </Link>
+          )
+        )}
+
         <Link to={"/auth/login"}>
           <Button variant={"primaryGradient"}>Login</Button>
         </Link>

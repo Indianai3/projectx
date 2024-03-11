@@ -1,11 +1,11 @@
 export const navLink = [
+  // {
+  //   label: "User Account",
+  //   link: "/user-account",
+  // },
   {
-    label: "User Account",
-    link: "/user-account",
-  },
-  {
-    label: "Shirts",
-    link: "/shirts",
+    label: "Shop",
+    link: "/shop", 
   },
   {
     label: "About Us",

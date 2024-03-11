@@ -52,7 +52,7 @@ const SignIn: FC<SignInProps> = ({}) => {
     navigate("/");
   }
   return (
-    <div className=" w-full flex justify-center items-center mt-16 gap-y-6 rounded-lg py-16">
+    <div className=" w-full flex justify-center items-center pt-16 gap-y-6 rounded-lg py-16">
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmitHandler)}
