@@ -1,3 +1,4 @@
+import Animation from "@/components/landing-components/animation";
 import Heading from "@/components/landing-components/heading";
 import { FC } from "react";
 
@@ -9,7 +10,10 @@ const LadingPage: FC<LadingPageProps> = ({}) => {
       <div className=" md:w-2/3  w-full ">
         <Heading />
       </div>
-      <div className="w-1/3 hidden lg:flex ">scroll animating</div>
+      <div className="w-1/3 hidden lg:flex ">
+        <Animation />
+        <Animation isReverse={true} />
+      </div>
     </div>
   );
 };
