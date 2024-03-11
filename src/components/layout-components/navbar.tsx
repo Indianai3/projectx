@@ -1,15 +1,15 @@
-import { FC } from "react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/utils/site-config";
+import { Box, ShoppingCart } from "lucide-react";
+import { FC } from "react";
 import { Link } from "react-router-dom";
-import { Box, ShoppingCart, SidebarOpen } from "lucide-react";
 import { ModeToggle } from "../mode-toggle";
 import Sidebar from "./sidebar";
 interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
   return (
-    <div className="flex justify-between items-center h-16 px-2  md:px-3  py-1 shadow-md shadow-secondary  ">
+    <div className="flex justify-center items-center h-16 px-1  md:px-3  py-1 shadow-md shadow-secondary w-full ">
       <div className="">
         <Link to={"/"}>
           <Button variant={"navbar"} className=" text-xl font-semibold">
@@ -38,7 +38,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
         </Link>
         <ModeToggle />
       </div>
-      <div className=" ml-auto  pr-4  gap-x-4 flex lg:hidden">
+      <div className=" ml-auto  pr-4  gap-x-3 flex lg:hidden">
         <Sidebar />
         <Link to={"/auth/login"}>
           <Button size={"sm"} variant={"primaryGradient"}>
